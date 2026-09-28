@@ -1,0 +1,596 @@
+/* General page styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f7f1e8;
+    color: #3f332b;
+    line-height: 1.7;
+}
+
+/* Navigation */
+
+header {
+    background: #efe4d5;
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+nav h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+nav a {
+    color: #3f332b;
+    text-decoration: none;
+    margin-left: 20px;
+    font-family: Arial, sans-serif;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero section */
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.small-text {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 90px);
+    font-weight: normal;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.intro {
+    max-width: 600px;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+/* Read button */
+
+.read-button {
+    display: inline-block;
+    background: #6f5745;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+.read-button:hover {
+    transform: translateY(-3px);
+    background: #4f3d31;
+}
+
+/* Welcome section */
+
+.welcome {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 70px 25px;
+    text-align: center;
+}
+
+.welcome h2 {
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.welcome p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #efe4d5;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+/* Mobile phone */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .intro {
+        font-size: 17px;
+    }
+}
+/* Story page */
+
+.story {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 25px;
+}
+
+.story h1 {
+    text-align: center;
+    font-size: 55px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 20px 0 30px;
+}
+
+.story > .small-text {
+    text-align: center;
+}
+
+.story-intro {
+    max-width: 650px;
+    margin: 0 auto 60px;
+    text-align: center;
+    font-size: 21px;
+    font-style: italic;
+    color: #6f5745;
+}
+
+.story-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.story-content p {
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 28px;
+}
+
+.story-ending {
+    margin-top: 70px;
+    padding: 45px 35px;
+    background: #efe4d5;
+    border-radius: 15px;
+}
+
+.story-ending h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.story-ending p {
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* Story page on smaller screens */
+
+@media (max-width: 700px) {
+
+    .story {
+        padding: 55px 20px;
+    }
+
+    .story h1 {
+        font-size: 42px;
+    }
+
+    .story-intro {
+        font-size: 18px;
+        margin-bottom: 45px;
+    }
+
+    .story-content p {
+        font-size: 17px;
+        line-height: 1.9;
+    }
+
+    .story-ending {
+        padding: 30px 25px;
+    }
+}
+/* Published-story details */
+
+.story-header {
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.story-header .small-text {
+    margin-bottom: 22px;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.story-header h1 {
+    margin-bottom: 25px;
+}
+
+.story-line {
+    width: 60px;
+    height: 1px;
+    background: #6f5745;
+    margin: 0 auto 30px;
+}
+
+.reading-time {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #8a7565;
+    margin-top: 25px;
+}
+
+/* Make the first paragraph feel like the beginning of a real story */
+
+.story-content p:first-child::first-letter {
+    font-size: 55px;
+    float: left;
+    line-height: 0.8;
+    padding-right: 8px;
+    padding-top: 7px;
+}
+
+/* Give important short lines more breathing room */
+
+.story-content p {
+    margin-bottom: 30px;
+}
+
+/* Elegant divider before the advice section */
+
+.story-ending {
+    position: relative;
+    margin-top: 90px;
+    padding: 55px 40px;
+}
+
+.story-ending::before {
+    content: "✦";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f7f1e8;
+    padding: 0 15px;
+    font-size: 18px;
+}
+
+.story-ending h2 {
+    text-align: center;
+}
+
+/* Improve the reading width */
+
+.story-content {
+    max-width: 680px;
+}
+
+/* Mobile adjustment */
+
+@media (max-width: 700px) {
+
+    .story-header {
+        margin-bottom: 55px;
+    }
+
+    .story-header h1 {
+        font-size: 42px;
+    }
+
+    .story-ending {
+        padding: 40px 25px;
+    }
+}
+/* Book cover */
+
+.book-cover {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 25px;
+    position: relative;
+}
+
+.cover-label {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.book-cover h1 {
+    max-width: 900px;
+    font-size: clamp(55px, 9vw, 105px);
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.cover-line {
+    width: 70px;
+    height: 1px;
+    background: #6f5745;
+    margin-bottom: 25px;
+}
+
+.cover-author {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.cover-quote {
+    max-width: 500px;
+    margin: 55px 0 35px;
+    font-size: 19px;
+    font-style: italic;
+    color: #6f5745;
+}
+
+.begin-button {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 1px solid #6f5745;
+    border-radius: 30px;
+    color: #3f332b;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+.begin-button:hover {
+    background: #6f5745;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Mobile cover */
+
+@media (max-width: 700px) {
+
+    .book-cover {
+        min-height: 80vh;
+    }
+
+    .book-cover h1 {
+        font-size: 55px;
+    }
+
+    .cover-quote {
+        font-size: 17px;
+        margin-top: 45px;
+    }
+}
+/* About page */
+
+.about-page {
+    max-width: 750px;
+    min-height: 75vh;
+    margin: 0 auto;
+    padding: 90px 25px;
+    text-align: center;
+}
+
+.about-page h1 {
+    font-size: 60px;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.about-line {
+    width: 60px;
+    height: 1px;
+    background: #6f5745;
+    margin: 0 auto 45px;
+}
+
+.about-text {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 700px) {
+
+    .about-page {
+        padding: 60px 20px;
+    }
+
+    .about-page h1 {
+        font-size: 45px;
+    }
+
+    .about-text p {
+        font-size: 17px;
+    }
+}
+/* Soft entrance animation for the About page */
+.about-page {
+    animation: softAppear 1.2s ease-out;
+}
+
+@keyframes softAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Soft entrance animation for the story */
+.story {
+    animation: storyAppear 1.2s ease-out;
+}
+
+@keyframes storyAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.reviews {
+    max-width: 800px;
+    margin: 90px auto;
+    padding: 70px 25px;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 45px;
+    font-weight: normal;
+    margin: 15px 0 20px;
+}
+
+.reviews-intro {
+    max-width: 600px;
+    margin: 0 auto 45px;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.review-form {
+    max-width: 650px;
+    margin: 0 auto 60px;
+    padding: 35px;
+    background: #efe4d5;
+    border-radius: 18px;
+}
+
+.review-form h3 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.review-form input,
+.review-form textarea {
+    width: 100%;
+    border: 1px solid #cdbbaa;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 15px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    background: #fffaf5;
+    color: #3f332b;
+}
+
+.review-form textarea {
+    resize: vertical;
+}
+
+.review-form button {
+    border: none;
+    background: #6f5745;
+    color: white;
+    padding: 13px 28px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.review-form button:hover {
+    background: #4f3d31;
+}
+
+.review-list {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.review-card {
+    text-align: left;
+    padding: 30px;
+    margin-bottom: 20px;
+    background: #f7f1e8;
+    border-left: 3px solid #6f5745;
+}
+
+.review-text {
+    font-size: 17px;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.review-name {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #8a7565;
+}
+
+@media (max-width: 700px) {
+    .reviews {
+        padding: 55px 20px;
+        margin: 60px auto;
+    }
+
+    .reviews h2 {
+        font-size: 38px;
+    }
+
+    .review-form {
+        padding: 25px;
+    }
+}
